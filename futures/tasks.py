@@ -43,7 +43,8 @@ class SleepHandler(tornado.web.RequestHandler):
 	@unblock
 	def get(self, n):
 		print "Awake! %s" % time.time()
-		wastetime(100000)
+		#wastetime(100000)
+		time.sleep(float(n))
 		return "Awake! %s" % time.time()
 
 class NormalSleepHandler(tornado.web.RequestHandler):
